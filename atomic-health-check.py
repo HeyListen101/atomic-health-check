@@ -1,5 +1,13 @@
 import streamlit as st
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title='Atomic Health Check', page_icon='healthcare.png', layout="wide", initial_sidebar_state="auto", menu_items=None)
 left, center, right = st.columns(3, gap='medium')
 
